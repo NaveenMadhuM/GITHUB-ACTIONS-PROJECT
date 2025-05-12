@@ -5,7 +5,6 @@ on:
       environment:
         description: 'Deploying to Environment'
         type: string
-        required: true
         default: 'test'
 jobs:
   demo-1:
