@@ -1,4 +1,4 @@
-name: Manually-Trigger
+name: Manually-Trigger-Inputs
 on: 
   workflow_dispatch:
     inputs:
