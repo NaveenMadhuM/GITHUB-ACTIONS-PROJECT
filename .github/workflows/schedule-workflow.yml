@@ -1,0 +1,11 @@
+name: Schedule-Trigger
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '*/2 * * * *'
+jobs:
+  demo-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
