@@ -1,9 +1,9 @@
 name: Manually-Trigger-Inputs
 on: 
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Deploying to Environment'
+  workflow_dispatch:   # to manually trigger the workflow we need to use workflow_dispatch event type
+    inputs:   # inputs field
+      environment:   # Input Name
+        description: 'Deploying to Environment'    # Description for the Input
         required: true
         default: 'test'
       age:
@@ -11,6 +11,12 @@ on:
         type: number
         required: true
         default: 26
+      gender:
+        description: "choose the gender "
+        type : choice
+        options:
+          - Male
+          - FeMale
 jobs:
   demo-1:
     runs-on: ubuntu-latest
