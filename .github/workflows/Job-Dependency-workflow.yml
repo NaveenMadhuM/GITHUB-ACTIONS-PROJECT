@@ -1,0 +1,32 @@
+name: job-dependency-workflow
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  CODE_CLONE:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+      - run: echo " clonning the code"
+  BUILD:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CODE_BUILD
+      - run: echo "Building the code"
+  TEST:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CODE_TEST
+      - run: echo " Testing the code"
+  DEPLOY:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CODE_DEPLOY
+      - run: echo " Deploying the code
+
+
+      
