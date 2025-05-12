@@ -6,8 +6,14 @@ on:
         description: 'Deploying to Environment'
         required: true
         default: 'test'
+      age:
+        description: "enter the age"
+        type: number
+        required: true
+        default: 26
 jobs:
   demo-1:
     runs-on: ubuntu-latest
     steps:
       - run: echo " deploying to ${{ inputs.environment}} "
+      - run: echo " age of the employee is  ${{ inputs.age}} "
