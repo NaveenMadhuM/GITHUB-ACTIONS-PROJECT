@@ -5,7 +5,7 @@ on:
       environment:
         description: 'Deploying to Environment'
         required: true
-        default: 'staging'
+        default: 'test'
 jobs:
   demo-1:
     runs-on: ubuntu-latest
