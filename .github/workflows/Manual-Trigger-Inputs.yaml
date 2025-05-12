@@ -4,10 +4,10 @@ on:
     inputs:
       environment:
         description: 'Deploying to Environment'
-        type: string
-        default: 'test'
+        required: true
+        default: 'staging'
 jobs:
   demo-1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo " deploying to ${{ inputs.environment}}
+      - run: echo " deploying to ${{ inputs.environment}} "
