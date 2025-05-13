@@ -1,0 +1,10 @@
+name: workflow level env variables
+on: push
+jobs:
+  Print_Env_Nmae:
+    runs-on: ubuntu-latest
+    env:
+      Job_Env: " I am in Job"
+    steps:
+     - name: Workflow_env
+       run: echo "$Job_Env"
