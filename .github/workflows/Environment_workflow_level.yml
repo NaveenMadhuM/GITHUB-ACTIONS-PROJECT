@@ -1,7 +1,7 @@
 name: workflow level env variables
 on: push
 env:
-  Work_Env: " This is my workflow Environment"
+  Work_Env: This is my workflow Environment
 jobs:
   Print_Env:
     runs-on: ubuntu-latest
