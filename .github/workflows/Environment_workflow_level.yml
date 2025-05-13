@@ -1,0 +1,11 @@
+name: workflow level env variables
+on: push
+env:
+  Work_Env: " This is my workflow Environment"
+jobs:
+  Print_Env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow_env
+        run: echo ' Environment_Variable_Workflow" $ Work_Env
+        
