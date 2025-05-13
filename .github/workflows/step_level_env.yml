@@ -1,0 +1,10 @@
+name: Step level workflow env
+on: push
+jobs:
+  print_step_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step with Env 
+        env:
+          step_env: "Environment variable for step"
+          run: echo $"step_env"
