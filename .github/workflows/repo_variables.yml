@@ -1,0 +1,13 @@
+name: workflow level env variables
+on: push
+env:
+  CHANNEL_NAME: InterviewPro
+jobs:
+  Print_Env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: access repository variables
+        run: echo ${{vars.USERNAME}}
+
+      - name: access repository secrets
+        run: echo ${{secrets.PASSWORD}}
